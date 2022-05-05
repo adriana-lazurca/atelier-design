@@ -1,24 +1,36 @@
+@import url("assets/styles/colors.css");
+@import url("assets/styles/utilities.css");
+
 body {
-    font-family: "Open Sans", sans-serif;
+    --color: var(--brown);
+    color: var(--color);
+    font-family: "OpenSauceSansRegular";
 }
 
 .btn {
-    --color: #463a2f;
-    --background-color: #fbcc0b;
-    color: var(--color);
+    --background-color: var(--yellow);
     background-color: var(--background-color);
     border-radius: 12px;
-    padding-block: 1.231em; /* 16px */
-    padding-inline: 1.846em; /* 24px */
-    /* font-size: 13px; */
-    font-size: clamp(0.75rem, 0.75vw + 0.25rem, 0.9rem);
+    padding-block: 16px; /* 1.231em */
+    padding-inline: 24px; /* 1.846em */
+
+    font-size: 13px;
+    /* font-size: clamp(0.75rem, 0.75vw + 0.25rem, 0.9rem); */
+    font-family: "OpenSauceSansExtraBold";
     font-weight: 800;
-    display: inline;
+
+    text-align: center;
     cursor: pointer;
+    letter-spacing: 0.1em;
+    line-height: 22px;
+}
+
+.btn-green {
+    --background-color: var(--green);
 }
 
 .header {
-    --background-color: white;
+    --background-color: var(--white);
     background-color: var(--background-color);
     display: flex;
     align-items: center;
@@ -32,10 +44,14 @@ body {
     margin-left: auto;
 }
 
-.content {
-    background-color: #e5e5e5;
-    /* position: relative; */
-    overflow: hidden;
+/*
+    All except first
+    * + * 
+    :not(:first-child)
+*/
+.solutions > :not(:first-child) {
+    margin-inline: 24px;
+    margin-block: 14px;
 }
 
 .worker-container {
@@ -44,16 +60,43 @@ body {
 
 .worker {
     display: block;
-
-    margin-left: auto;
-    /* transform: translate(5px, -75px); */
-
     position: relative;
     top: -75px;
     right: -5px;
+    margin-left: auto;
+    /* transform: translate(5px, -75px); */
 }
 
-h1 {
-    text-align: center;
-    font-weight: 600;
+.title-solutions {
+    font-size: 28px;
+    line-height: 39px;
+}
+
+.title-about {
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.subtitle {
+    font-family: "OpenSauceSansBlack";
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.worker-2 {
+    margin: 0 !important;
+}
+
+.union-icon {
+    transform: translate(-16px, 22px);
+}
+
+.advantages {
+    color: var(--white);
 }

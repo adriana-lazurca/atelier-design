@@ -1,0 +1,71 @@
+.px-24 {
+    padding-inline: 24px;
+}
+
+.py-50 {
+    padding-block: 50px;
+}
+
+.mx-24 {
+    margin-inline: 24px;
+}
+
+.my-16 {
+    margin-block: 16px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-green {
+    color: var(--green);;
+}
+
+.text-yellow {
+    color: var(--yellow);;
+}
+
+.text-light-black {
+    color: var(--light-black);
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.ff-avenir-light {
+    font-family: Avenir, "Century Gothic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ff-oss-extra-bold {
+    font-family: "OpenSauceSansExtraBold";
+    font-weight: 800;
+}
+
+.ff-oss-semi-bold {
+    font-family: "OpenSauceSansSemiBold";
+    font-weight: 600;
+}
+
+.bg-gray-light {
+    background-color: var(--gray-light);
+}
+
+.bg-gray-dark {
+    background-color: var(--gray-dark);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
