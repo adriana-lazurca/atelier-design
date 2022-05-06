@@ -1,0 +1,20 @@
+.menu {
+    background-color: aquamarine;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    right: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.btn-menu::after {
+    content: 'Menu';
+}
+
+.btn-menu.active::after {
+    content: 'Close';
+}

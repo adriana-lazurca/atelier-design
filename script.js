@@ -44,3 +44,14 @@ function showPreviousText() {
       setPagination();
    }
 }
+
+// MENU
+const menuButton = document.querySelector('.btn-menu');
+const menu = document.querySelector('.menu');
+
+menuButton.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+   menu.classList.toggle('active');
+   menuButton.classList.toggle('active');
+}
