@@ -1,0 +1,8 @@
+<svg viewBox="0 600 320 929" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="320" height="929" transform="matrix(1 0 0 -1 -0.000244141 929)" fill="#2D2D2D" />
+    <g opacity="0.4">
+        <ellipse cx="167.999" cy="1033" rx="292.248" ry="290.589" transform="rotate(90 167.999 1033)" fill="white" fill-opacity="0.15" />
+        <path d="M167.932 679.349C362.783 679.349 520.742 837.789 520.742 1033.24C520.742 1228.68 362.783 1387.12 167.932 1387.12C-26.9189 1387.12 -184.879 1228.68 -184.879 1033.24C-184.879 837.789 -26.919 679.349 167.932 679.349Z" stroke="white" stroke-width="0.7" />
+        <circle cx="168" cy="1033" r="385.65" transform="rotate(-90 168 1033)" stroke="#FBCC0B" stroke-width="0.7" />
+    </g>
+</svg>

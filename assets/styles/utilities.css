@@ -34,6 +34,18 @@
     margin-block: 64px;
 }
 
+.mt-64 {
+    margin-block-start: 64px;
+}
+
+.mb-48 {
+    margin-block-end: 48px;
+}
+
+.mb-24 {
+    margin-block-end: 24px;
+}
+
 .mt-50 {
     margin-top: 50px;
 }

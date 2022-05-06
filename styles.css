@@ -128,7 +128,15 @@ body {
 
 .devices {
     position: absolute;
-    width: 90%;
+    width: 88%;
     left: 50%;
-    transform: translate(-50%, -118%);
+    transform: translate(-50%, 32%);
 }
+
+.fond-container {
+    /* 370px; */
+    max-height: 95vw;
+    position: relative;
+    transform: translateY(-5%);
+}
+
