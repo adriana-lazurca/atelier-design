@@ -2,6 +2,18 @@
     padding-inline: 24px;
 }
 
+.pt-16 {
+    padding-block-start: 16px;
+}
+
+.py-16 {
+    padding-block: 16px;
+}
+
+.py-42 {
+    padding-block: 42px;
+}
+
 .py-50 {
     padding-block: 50px;
 }
@@ -10,8 +22,16 @@
     margin-inline: 24px;
 }
 
+.my-14 {
+    margin-block: 14px;
+}
+
 .my-16 {
     margin-block: 16px;
+}
+
+.my-64 {
+    margin-block: 64px;
 }
 
 .mt-50 {
@@ -23,11 +43,11 @@
 }
 
 .text-green {
-    color: var(--green);;
+    color: var(--green);
 }
 
 .text-yellow {
-    color: var(--yellow);;
+    color: var(--yellow);
 }
 
 .text-light-black {
@@ -46,6 +66,11 @@
     font-family: Avenir, "Century Gothic", sans-serif;
     font-weight: 300;
     font-style: normal;
+}
+
+.ff-oss-bold {
+    font-family: "OpenSauceSansBold";
+    font-weight: 700;
 }
 
 .ff-oss-extra-bold {
@@ -68,4 +93,46 @@
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+/* btn */
+.text-xxs {
+    font-size: 9px;
+    line-height: 10px;
+}
+
+.text-xs {
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.text-sm {
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.text-base {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.text-lg {
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.text-xl {
+    font-size: 28px;
+    line-height: 39px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.circle {
+    --border-radius: 50%;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    aspect-ratio: 1 / 1;
 }

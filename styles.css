@@ -7,26 +7,18 @@ body {
     font-family: "OpenSauceSansRegular";
 }
 
-.btn {
-    --background-color: var(--yellow);
-    background-color: var(--background-color);
-    border-radius: 12px;
-    padding-block: 16px; /* 1.231em */
-    padding-inline: 24px; /* 1.846em */
-
-    font-size: 13px;
-    /* font-size: clamp(0.75rem, 0.75vw + 0.25rem, 0.9rem); */
-    font-family: "OpenSauceSansExtraBold";
-    font-weight: 800;
-
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 0.1em;
-    line-height: 22px;
+.solutions {
+    padding-block-end: 50px;
 }
 
-.btn-green {
-    --background-color: var(--green);
+/*
+    All except first
+    * + * 
+    :not(:first-child)
+*/
+.solutions > :not(:first-child) {
+    margin-inline: 24px;
+    margin-block: 14px;
 }
 
 .header {
@@ -40,18 +32,31 @@ body {
     position: relative;
 }
 
-.header .btn:first-of-type {
-    margin-left: auto;
+.btn {
+    --background-color: var(--yellow);
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding-block: 16px; /* 1.231em */
+    padding-inline: 24px; /* 1.846em */
+
+    font-size: 13px;
+    line-height: 22px;
+
+    /* font-size: clamp(0.75rem, 0.75vw + 0.25rem, 0.9rem); */
+    font-family: "OpenSauceSansExtraBold";
+    font-weight: 800;
+
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 0.1em;
 }
 
-/*
-    All except first
-    * + * 
-    :not(:first-child)
-*/
-.solutions > :not(:first-child) {
-    margin-inline: 24px;
-    margin-block: 14px;
+.btn-green {
+    --background-color: var(--green);
+}
+
+.header .btn:first-of-type {
+    margin-left: auto;
 }
 
 .worker-container {
@@ -65,16 +70,6 @@ body {
     right: -5px;
     margin-left: auto;
     /* transform: translate(5px, -75px); */
-}
-
-.title-solutions {
-    font-size: 28px;
-    line-height: 39px;
-}
-
-.title-about {
-    font-size: 22px;
-    line-height: 35px;
 }
 
 .subtitle {
@@ -99,4 +94,41 @@ body {
 
 .advantages {
     color: var(--white);
+    overflow: hidden;
+    /* background-image: url("assets/images/Fond.png"); */
+}
+
+.informative-icon {
+    position: absolute;
+    top: -70px;
+    left: -55px;
+}
+
+.slider-container {
+    position: relative;
+    padding: 80px 36px;
+    border: 1px solid var(--gray-main);
+    border-radius: 12px;
+    margin-inline: 49px;
+    margin-block: 30px;
+}
+
+.slider-btn-group {
+    position: absolute;
+    right: -52px;
+    bottom: -85px;
+}
+
+.pagination {
+    position: absolute;
+    bottom: -20px;
+    left: -8px;
+    letter-spacing: 0.3em;
+}
+
+.devices {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -118%);
 }
