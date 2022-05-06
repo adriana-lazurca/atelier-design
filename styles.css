@@ -69,7 +69,6 @@ body {
     top: -75px;
     right: -5px;
     margin-left: auto;
-    /* transform: translate(5px, -75px); */
 }
 
 .subtitle {
@@ -95,7 +94,6 @@ body {
 .advantages {
     color: var(--white);
     overflow: hidden;
-    /* background-image: url("assets/images/Fond.png"); */
 }
 
 .informative-icon {
@@ -103,6 +101,8 @@ body {
     top: -70px;
     left: -55px;
 }
+
+/* Slider */
 
 .slider-container {
     position: relative;
@@ -115,8 +115,34 @@ body {
 
 .slider-btn-group {
     position: absolute;
-    right: -52px;
-    bottom: -85px;
+    transform: translate(135px, 46px);
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1em 1.5em;
+}
+
+.slider-btn-group > * {
+    display: inherit;
+}
+
+:is(.next, .previous, .separator) {
+    margin-block: 0.7em;
+    margin-inline: 0.5em;
+    width: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+.previous-btn,
+.next-btn {
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.previous-btn:hover,
+.next-btn:hover {
+    background-color: rgb(19, 54, 24);
 }
 
 .pagination {
@@ -139,4 +165,3 @@ body {
     position: relative;
     transform: translateY(-5%);
 }
-
