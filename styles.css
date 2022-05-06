@@ -56,7 +56,7 @@ body {
     --background-color: var(--green);
 }
 
-.header .btn:first-of-type {
+.header .menu-btn {
     margin-left: auto;
 }
 

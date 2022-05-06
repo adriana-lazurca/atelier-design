@@ -6,6 +6,14 @@
     padding-block-start: 16px;
 }
 
+.pt-50 {
+    padding-block-start: 50px;
+}
+
+.pb-24 {
+    padding-bottom: 24px;
+}
+
 .py-16 {
     padding-block: 16px;
 }
@@ -56,6 +64,10 @@
 
 .text-green {
     color: var(--green);
+}
+
+.text-brown {
+    color: var(--brown);
 }
 
 .text-yellow {
@@ -115,6 +127,11 @@
 
 .text-xs {
     font-size: 13px;
+    line-height: 14px;
+}
+
+.text-2xs {
+    font-size: 13px;
     line-height: 22px;
 }
 
@@ -147,4 +164,16 @@
     border-radius: var(--border-radius);
     display: inline-block;
     aspect-ratio: 1 / 1;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap-0\.5 {
+    gap: 0.5em;
 }

@@ -46,12 +46,15 @@ function showPreviousText() {
 }
 
 // MENU
-const menuButton = document.querySelector('.btn-menu');
+const menuButtons = document.querySelectorAll('.menu-btn');
 const menu = document.querySelector('.menu');
 
-menuButton.addEventListener('click', toggleMenu);
+menuButtons.forEach((button) => button.addEventListener('click', toggleMenu));
 
 function toggleMenu() {
    menu.classList.toggle('active');
-   menuButton.classList.toggle('active');
+
+   menuButtons.forEach((button) => {
+      button.classList.toggle('active');
+   });
 }
