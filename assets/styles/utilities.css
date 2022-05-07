@@ -26,6 +26,10 @@
     padding-block: 50px;
 }
 
+.px-24{
+    padding-inline:24px
+}
+
 .mx-24 {
     margin-inline: 24px;
 }

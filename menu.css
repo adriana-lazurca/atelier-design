@@ -21,39 +21,32 @@
 
 /* Languages */
 .language {
+    border: 1px solid var(--yellow);
     padding-inline: 18px;
     padding-block: 14px;
+    cursor: pointer;
 }
 
-.french {
-    border: 1px solid var(--yellow);
+.selected {
     background-color: var(--yellow);
     letter-spacing: 0.02em;
     margin-right: 12px;
 }
 
-.english {
-    border: 1px solid var(--yellow);
-    cursor: pointer;
-}
-
 /* List */
-.menu-container ul {
+.menu ul {
     padding-inline-start: 0;
 }
 
-.menu-container ul:first-child {
+.menu ul:first-child {
     border-top: 1px solid var(--yellow);
-    /* color: var(--brown); */
-    /* font-family: "OpenSauceSansBold";
-    font-weight: 700; */
 }
 
 .menu li {
     list-style-type: none;
 }
 
-.menu-container a {
+.menu a {
     text-decoration: none;
     color: var(--light-black);
 }
