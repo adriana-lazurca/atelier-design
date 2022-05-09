@@ -62,7 +62,7 @@ body {
     :not(:first-child)
 */
 .solutions-description > *,
-.about > :not(:first-child) {
+.about-description > * {
     margin-inline: 24px;
     margin-block: 14px;
 }
@@ -92,8 +92,18 @@ body {
     line-height: 30px;
 }
 
-.worker-2 {
+.worker2-container {
+   
+    padding-block: 50px;
+}
+
+.worker2 {
     margin: 0 !important;
+    content: url(assets/images/worker2.png);
+}
+
+.worker2-shadow {
+    display: none;
 }
 
 .union-icon {
@@ -124,7 +134,8 @@ body {
 
 .slider-btn-group {
     position: absolute;
-    transform: translate(135px, 46px);
+    bottom: -24px;
+    right: -30px;
     display: flex;
     align-items: center;
     background-color: white;
@@ -208,8 +219,46 @@ body {
         margin-block: 2.5em;
     }
 
-    .solutions-description > *
-    /* .about > :not(:first-child)  */ {
+    .about {
+        display: flex;
+        gap: 8%;
+        padding-inline-end: 7%;
+    }
+
+    .worker2-container {
+        flex-basis: 50%;
+        position: relative;
+        top: 6rem;
+        padding-block: 0;
+    }
+
+    .worker2 {
+        content: url(assets/images/worker2-laptop.png);
+        position: relative;
+        z-index: 2;
+        position: relative;
+    }
+
+    .worker2-shadow {
+        --shadow-space: 30px;
+        top: var(--shadow-space);
+        bottom: calc(-1 * var(--shadow-space));
+        left: 0;
+        right: calc(-1 * var(--shadow-space));
+
+        position: absolute;
+        background-color: var(--white);
+        border-radius: 12px;
+        z-index: 1;
+        display: block;
+    }
+
+    .about-description {
+        flex-basis: 50%;
+    }
+
+    .solutions-description > *,
+    .about-description > * {
         margin-inline: 0;
     }
 }
