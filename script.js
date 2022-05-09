@@ -81,8 +81,6 @@ const menuMobile = document.querySelector('.menu-mobile');
 const menuLaptop = document.querySelector('.menu-laptop');
 
 function toggleMenu() {
-   console.log(window.innerWidth);
-
    if (window.innerWidth <= 700) {
       showMobileMenu();
       hideLaptopMenu();
