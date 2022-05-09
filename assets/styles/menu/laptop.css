@@ -1,0 +1,26 @@
+/* Menu-laptop */
+.menu-laptop {
+    justify-content: flex-end;
+}
+
+.menu-laptop a {
+    color: var(--brown);
+}
+
+.menu-laptop a:hover {
+    color: var(--light-black);
+}
+
+.nav-item-laptop {
+    color: var(--light-black);
+    display: inline;
+    padding: 0.5em;
+}
+
+.check {
+    cursor: pointer;
+}
+
+.check:hover {
+    background-color: var(--yellow-light);
+}

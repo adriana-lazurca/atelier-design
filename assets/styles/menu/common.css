@@ -1,0 +1,36 @@
+.header :is(.menu-mobile, .menu-laptop) {
+    display: none;
+}
+
+.menu-mobile,
+.menu-laptop {
+    --background-color: var(--white);
+    background-color: var(--background-color);
+    display: flex;
+    flex-grow: 1;
+    align-items: center
+}
+
+.menu-mobile.active,
+.menu-laptop.active {
+    display: flex;
+}
+
+.header .menu-btn {
+    margin-left: auto;
+}
+
+
+/* Languages */
+.language {
+    border: 1px solid var(--yellow);
+    padding-inline: 18px;
+    padding-block: 14px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: var(--yellow);
+    letter-spacing: 0.02em;
+    margin-right: 12px;
+}

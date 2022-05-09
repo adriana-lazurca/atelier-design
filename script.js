@@ -9,12 +9,28 @@ const slider = document.querySelector('.slider-text');
 const pagination = document.querySelector('.pagination');
 
 document.addEventListener('DOMContentLoaded', onLoad);
+document.addEventListener('unload', onLeave);
+
 document.querySelector('.next-btn').addEventListener('click', showNextText);
 document.querySelector('.previous-btn').addEventListener('click', showPreviousText);
 
 function onLoad() {
+   toggleMenu();
    setSliderText();
    setPagination();
+   addEventHandlers();
+}
+
+function onLeave() {
+   removeEventHandlers();
+}
+
+function addEventHandlers() {
+   window.addEventListener('resize', toggleMenu);
+}
+
+function removeEventHandlers() {
+   window.removeEventListener('resize', toggleMenu);
 }
 
 function setSliderText() {
@@ -47,14 +63,56 @@ function showPreviousText() {
 
 // MENU
 const menuButtons = document.querySelectorAll('.menu-btn');
-const menu = document.querySelector('.menu');
+const menuModal = document.querySelector('.menu-modal');
 
-menuButtons.forEach((button) => button.addEventListener('click', toggleMenu));
+menuButtons.forEach((button) => button.addEventListener('click', toggleModal));
 
-function toggleMenu() {
-   menu.classList.toggle('active');
+function toggleModal() {
+   menuModal.classList.toggle('active');
 
    menuButtons.forEach((button) => {
       button.classList.toggle('active');
    });
+}
+
+//MENU
+const screenWidth = window.innerWidth;
+const menuMobile = document.querySelector('.menu-mobile');
+const menuLaptop = document.querySelector('.menu-laptop');
+
+function toggleMenu() {
+   console.log(window.innerWidth);
+
+   if (window.innerWidth <= 700) {
+      showMobileMenu();
+      hideLaptopMenu();
+      return;
+   }
+
+   showLaptopMenu();
+   hideMobileMenu();
+}
+
+function showMobileMenu() {
+   if (!menuMobile.classList.contains('active')) {
+      menuMobile.classList.add('active');
+   }
+}
+
+function showLaptopMenu() {
+   if (!menuLaptop.classList.contains('active')) {
+      menuLaptop.classList.add('active');
+   }
+}
+
+function hideLaptopMenu() {
+   if (menuLaptop.classList.contains('active')) {
+      menuLaptop.classList.remove('active');
+   }
+}
+
+function hideMobileMenu() {
+   if (menuMobile.classList.contains('active')) {
+      menuMobile.classList.remove('active');
+   }
 }

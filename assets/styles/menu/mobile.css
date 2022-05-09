@@ -1,14 +1,21 @@
-.menu {
-    background-color: var(--light-yellow);
+/* Menu-mobile*/
+
+.menu-modal {
+    background-color: var(--yellow-light);
     position: absolute;
     top: 100%;
-    left: 100%;
-    right: 0;
-    transition: left 0.3s ease-in-out;
+    left: -100%;
+    right: 100%;
+
+    --transition-duration: 0.3s;
+    --transition-function: ease-in-out;
+    transition: left var(--transition-duration) var(--transition-function),
+        right var(--transition-duration) var(--transition-function);
 }
 
-.menu.active {
+.menu-modal.active {
     left: 0;
+    right: 0;
 }
 
 .menu-btn {
@@ -19,43 +26,27 @@
     display: flex;
 }
 
-/* Languages */
-.language {
-    border: 1px solid var(--yellow);
-    padding-inline: 18px;
-    padding-block: 14px;
-    cursor: pointer;
-}
-
-.selected {
-    background-color: var(--yellow);
-    letter-spacing: 0.02em;
-    margin-right: 12px;
-}
-
-/* List */
-.menu ul {
+.menu-modal ul {
     padding-inline-start: 0;
 }
 
-.menu ul:first-child {
+.menu-modal ul:first-child {
     border-top: 1px solid var(--yellow);
 }
 
-.menu li {
+.menu-modal li {
     list-style-type: none;
 }
 
-.menu a {
-    text-decoration: none;
+.menu-modal a {
     color: var(--light-black);
 }
 
-.menu a:hover {
+.menu-modal a:hover {
     color: var(--gray-dark);
 }
 
-.nav-item {
+.nav-item-mobile {
     font-family: "OpenSauceSansRegular";
     font-weight: 400;
     font-size: 22px;
@@ -66,7 +57,7 @@
     padding-block: 17px;
 }
 
-.nav-item:first-child {
+.nav-item-mobile:first-child {
     display: flex;
 }
 
