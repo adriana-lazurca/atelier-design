@@ -11,6 +11,9 @@ body {
 }
 
 .header {
+    --background-color: var(--white);
+    background-color: var(--background-color);
+
     display: flex;
     align-items: center;
     padding-inline: 0.5em;
@@ -50,8 +53,9 @@ body {
     --background-color: var(--green);
 }
 
-.solutions {
-    padding-block-end: 50px;
+.solutions,
+.about {
+    padding-block-end: 2rem;
 }
 
 /*
@@ -59,7 +63,8 @@ body {
     * + * 
     :not(:first-child)
 */
-.solutions > :not(:first-child) {
+.solutions-description > *,
+.about > :not(:first-child) {
     margin-inline: 24px;
     margin-block: 14px;
 }
@@ -74,6 +79,7 @@ body {
     top: -75px;
     right: -5px;
     margin-left: auto;
+    content: url(assets/images/worker-mobile.png);
 }
 
 .subtitle {
@@ -171,13 +177,6 @@ body {
     transform: translateY(-5%);
 }
 
-@media only screen and (max-width: 700px) {
-    .header {
-        --background-color: var(--white);
-        background-color: var(--background-color);
-    }
-}
-
 @media only screen and (min-width: 701px) {
     .logo-container {
         display: flex;
@@ -187,6 +186,32 @@ body {
     }
 
     .header {
+        --background-color: var(--gray-light);
         padding-inline: 0;
+    }
+
+    .solutions {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: min(5%, 5rem);
+    }
+
+    .worker-container {
+        flex-basis: 60%;
+    }
+
+    .worker {
+        content: url(assets/images/worker-laptop.png);
+    }
+
+    .solutions-description {
+        flex-basis: 40%;
+        margin-inline: 0;
+        margin-block: 2.5em;
+    }
+
+    .solutions-description > *
+    /* .about > :not(:first-child)  */ {
+        margin-inline: 0;
     }
 }
