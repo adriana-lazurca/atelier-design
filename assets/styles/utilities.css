@@ -10,6 +10,10 @@
     padding-block-start: 50px;
 }
 
+.pb-12 {
+    padding-bottom: 12px;
+}
+
 .pb-24 {
     padding-bottom: 24px;
 }
@@ -26,13 +30,12 @@
     padding-block: 50px;
 }
 
-.px-2{
-    padding-inline:2px
+.px-2 {
+    padding-inline: 2px;
 }
 
-
-.px-24{
-    padding-inline:24px
+.px-24 {
+    padding-inline: 24px;
 }
 
 .mx-10 {

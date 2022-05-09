@@ -8,7 +8,8 @@
     background-color: var(--background-color);
     display: flex;
     flex-grow: 1;
-    align-items: center
+    align-items: center;
+    padding-block: 0.5em;
 }
 
 .menu-mobile.active,
@@ -19,7 +20,6 @@
 .header .menu-btn {
     margin-left: auto;
 }
-
 
 /* Languages */
 .language {

@@ -1,5 +1,12 @@
 /* Menu-laptop */
 .menu-laptop {
+    justify-content: center;
+    padding-inline: 1em;
+}
+
+.menu-laptop nav {
+    width: 100%;
+    display: flex;
     justify-content: flex-end;
 }
 
