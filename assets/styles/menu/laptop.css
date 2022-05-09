@@ -10,6 +10,10 @@
     justify-content: flex-end;
 }
 
+.menu-laptop ul {
+    padding-inline: 1em;
+}
+
 .menu-laptop a {
     color: var(--brown);
 }
