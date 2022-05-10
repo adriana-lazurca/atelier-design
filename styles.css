@@ -33,13 +33,10 @@ body {
     --background-color: var(--yellow);
     background-color: var(--background-color);
     border-radius: 12px;
-    padding-block: 16px; /* 1.231em */
-    padding-inline: 24px; /* 1.846em */
-
+    padding-block: 16px;
+    padding-inline: 24px;
     font-size: 13px;
     line-height: 22px;
-
-    /* font-size: clamp(0.75rem, 0.75vw + 0.25rem, 0.9rem); */
     font-family: "OpenSauceSansExtraBold";
     font-weight: 800;
 
@@ -56,8 +53,19 @@ body {
     padding-block-end: 1rem;
 }
 
+.solutions-description h2 {
+    font-size: 28px;
+    line-height: 39px;
+}
+
 .about {
     padding-block-end: 2rem;
+}
+
+.about-description h2,
+.slider-container h2 {
+    font-size: 22px;
+    line-height: 35px;
 }
 
 /*
@@ -90,6 +98,7 @@ body {
     font-weight: 900;
     font-size: 15px;
     line-height: 28px;
+    letter-spacing: 0.05em;
 }
 
 .description {
@@ -133,12 +142,18 @@ body {
 }
 
 .slider {
+    font-weight: 500;
     position: relative;
     padding: 80px 36px;
     border: 1px solid var(--gray-main);
     border-radius: 12px;
     margin-inline: 49px;
     margin-block: 30px;
+}
+
+.slider-text {
+    font-size: 18px;
+    line-height: 30px;
 }
 
 .slider-btn-group {
@@ -243,6 +258,10 @@ body {
         padding-left: min(5%, 5rem);
     }
 
+    .description {
+        line-height: 32px;
+    }
+
     .worker-container {
         flex-basis: 60%;
         position: relative;
@@ -252,6 +271,8 @@ body {
         content: url(assets/images/worker-laptop.png);
         position: absolute;
         max-height: min(40rem, 115vh);
+        min-height: 35rem;
+        min-width: 35rem;
     }
 
     .solutions-description {
@@ -264,6 +285,16 @@ body {
         display: flex;
         gap: 8%;
         padding-inline-end: 7%;
+    }
+
+    .about-description h2,
+    .slider-container h2 {
+        font-size: 26px;
+        line-height: 42px;
+    }
+
+    .subtitle {
+        font-size: 18px;
     }
 
     .worker2-container {
@@ -302,6 +333,11 @@ body {
         margin-inline: 0;
     }
 
+    .solutions-description h2 {
+        font-size: 34px;
+        line-height: 47px;
+    }
+
     .advantages {
         display: flex;
         gap: 10%;
@@ -311,6 +347,11 @@ body {
     .slider-container {
         flex: 40% 0 0;
         padding-block-start: 8%;
+    }
+
+    .slider-text {
+        font-size: 24px;
+        line-height: 32px;
     }
 
     .fond-container {

@@ -1,7 +1,11 @@
 /* Menu-laptop */
 .menu-laptop {
+    font-size: 12px;
+    line-height: 13px;
     justify-content: center;
     padding-inline: 1em;
+    box-shadow: 7px 7px 18px lightgrey;
+    border-radius: 12px;
 }
 
 .menu-laptop nav {
@@ -25,7 +29,7 @@
 .nav-item-laptop {
     color: var(--light-black);
     display: inline;
-    padding: 0.5em;
+    padding: 1.25em;
 }
 
 .check {
