@@ -52,7 +52,10 @@ body {
     --background-color: var(--green);
 }
 
-.solutions,
+.solutions {
+    padding-block-end: 1rem;
+}
+
 .about {
     padding-block-end: 2rem;
 }
@@ -69,15 +72,16 @@ body {
 }
 
 .worker-container {
-    max-height: min(320px, 90vw);
+    max-height: min(20rem, 90vw);
 }
 
 .worker {
     display: block;
     position: relative;
     top: -75px;
-    right: -5px;
+    right: 0;
     margin-left: auto;
+    max-height: 80%;
     content: url(assets/images/worker-mobile.png);
 }
 
@@ -202,6 +206,14 @@ body {
     display: block;
 }
 
+.check-element {
+    display: none;
+}
+
+.check-element.active {
+    display: block;
+}
+
 /* Laptop styles */
 
 @media only screen and (min-width: 701px) {
@@ -225,16 +237,27 @@ body {
 
     .worker-container {
         flex-basis: 60%;
+        position: relative;
     }
 
     .worker {
         content: url(assets/images/worker-laptop.png);
+        position: absolute;
+        max-height: min(40rem, 115vh);
     }
 
     .solutions-description {
         flex-basis: 40%;
         margin-inline: 0;
         margin-block: 2.5em;
+    }
+
+    .check-box {
+        background-color: var(--white);
+        padding: 1em;
+        border-radius: 12px;
+        box-shadow: 19px 19px 43px rgba(0, 0, 0, 0.09);
+        cursor: pointer;
     }
 
     .about {

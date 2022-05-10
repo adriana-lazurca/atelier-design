@@ -6,8 +6,9 @@ function onLoad() {
 
    displayResponsiveMenu();
    displayResponsiveFond();
-   
+
    setSlider();
+   displayCheckElement()
 }
 
 function onLeave() {
@@ -17,6 +18,7 @@ function onLeave() {
 function onResize() {
    displayResponsiveMenu();
    displayResponsiveFond();
+   displayCheckElement()
 }
 
 function addEventHandlers() {
@@ -166,5 +168,30 @@ function showLaptopFond() {
 function hideLaptopFond() {
    if (fondLaptop.classList.contains('active')) {
       fondLaptop.classList.remove('active');
+   }
+}
+
+/************** Check element display logic *****************/
+const checkElement = document.querySelector('.check-element');
+
+function displayCheckElement() {
+   if (window.innerWidth > 700) {
+      showCheckElement();
+
+      return;
+   }
+
+   hideCheckElement();
+}
+
+function showCheckElement(){
+   if (!checkElement.classList.contains('active')) {
+      checkElement.classList.add('active');
+   }
+}
+
+function hideCheckElement(){
+   if (checkElement.classList.contains('active')) {
+      checkElement.classList.remove('active');
    }
 }
