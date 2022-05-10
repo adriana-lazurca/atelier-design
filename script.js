@@ -1,3 +1,35 @@
+document.addEventListener('DOMContentLoaded', onLoad);
+document.addEventListener('unload', onLeave);
+
+function onLoad() {
+   addEventHandlers();
+
+   displayResponsiveMenu();
+   displayResponsiveFond();
+   
+   setSlider();
+}
+
+function onLeave() {
+   removeEventHandlers();
+}
+
+function onResize() {
+   displayResponsiveMenu();
+   displayResponsiveFond();
+}
+
+function addEventHandlers() {
+   window.addEventListener('resize', onResize);
+}
+
+function removeEventHandlers() {
+   window.removeEventListener('resize', onResize);
+}
+
+const screenWidth = window.innerWidth;
+
+/************** Slider *****************/
 const sliderTexts = [
    'Connectée et intelligente, permettant un suivi à distance',
    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -8,37 +40,17 @@ let sliderIndex = 0;
 const slider = document.querySelector('.slider-text');
 const pagination = document.querySelector('.pagination');
 
-document.addEventListener('DOMContentLoaded', onLoad);
-document.addEventListener('unload', onLeave);
-
-document.querySelector('.next-btn').addEventListener('click', showNextText);
-document.querySelector('.previous-btn').addEventListener('click', showPreviousText);
-
-function onLoad() {
-   toggleMenu();
-   setSliderText();
-   setPagination();
-   addEventHandlers();
-}
-
-function onLeave() {
-   removeEventHandlers();
-}
-
-function addEventHandlers() {
-   window.addEventListener('resize', toggleMenu);
-}
-
-function removeEventHandlers() {
-   window.removeEventListener('resize', toggleMenu);
-}
-
 function setSliderText() {
    slider.textContent = sliderTexts[sliderIndex];
 }
 
 function setPagination() {
    pagination.textContent = sliderIndex + 1 + '/' + sliderTexts.length;
+}
+
+function setSlider() {
+   setSliderText();
+   setPagination();
 }
 
 function showNextText() {
@@ -61,7 +73,10 @@ function showPreviousText() {
    }
 }
 
-// MENU
+document.querySelector('.next-btn').addEventListener('click', showNextText);
+document.querySelector('.previous-btn').addEventListener('click', showPreviousText);
+
+/************** Modal display logic *****************/
 const menuButtons = document.querySelectorAll('.menu-btn');
 const menuModal = document.querySelector('.menu-modal');
 
@@ -75,12 +90,12 @@ function toggleModal() {
    });
 }
 
-//MENU
-const screenWidth = window.innerWidth;
+/************** Menu display logic *****************/
+
 const menuMobile = document.querySelector('.menu-mobile');
 const menuLaptop = document.querySelector('.menu-laptop');
 
-function toggleMenu() {
+function displayResponsiveMenu() {
    if (window.innerWidth <= 700) {
       showMobileMenu();
       hideLaptopMenu();
@@ -112,5 +127,44 @@ function hideLaptopMenu() {
 function hideMobileMenu() {
    if (menuMobile.classList.contains('active')) {
       menuMobile.classList.remove('active');
+   }
+}
+
+/************** Fond display logic *****************/
+const fondMobile = document.querySelector('.fond-mobile');
+const fondLaptop = document.querySelector('.fond-laptop');
+
+function displayResponsiveFond() {
+   if (window.innerWidth <= 700) {
+      showMobileFond();
+      hideLaptopFond();
+      return;
+   }
+
+   showLaptopFond();
+   hideMobileFond();
+}
+
+function showMobileFond() {
+   if (!fondMobile.classList.contains('active')) {
+      fondMobile.classList.add('active');
+   }
+}
+
+function hideMobileFond() {
+   if (fondMobile.classList.contains('active')) {
+      fondMobile.classList.remove('active');
+   }
+}
+
+function showLaptopFond() {
+   if (!fondLaptop.classList.contains('active')) {
+      fondLaptop.classList.add('active');
+   }
+}
+
+function hideLaptopFond() {
+   if (fondLaptop.classList.contains('active')) {
+      fondLaptop.classList.remove('active');
    }
 }

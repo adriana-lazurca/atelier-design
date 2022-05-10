@@ -1,0 +1,7 @@
+<svg width="460" height="1273" viewBox="0 0 460 1273" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="ROND fond" opacity="0.4">
+        <ellipse id="Ellipse 5" cx="832" cy="832" rx="629.924" ry="626.347" fill="white" fill-opacity="0.15" />
+        <path id="Ellipse 26" d="M69.3212 832.146C69.3213 411.933 411.011 71.2804 832.508 71.2804C1254.01 71.2804 1595.7 411.933 1595.7 832.147C1595.7 1252.36 1254.01 1593.01 832.508 1593.01C411.011 1593.01 69.3212 1252.36 69.3212 832.146Z" stroke="white" stroke-width="0.7" />
+        <circle id="Ellipse 15" cx="832" cy="832" r="831.65" transform="rotate(-180 832 832)" stroke="#FBCC0B" stroke-width="0.7" />
+    </g>
+</svg>
