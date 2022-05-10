@@ -206,15 +206,23 @@ body {
     display: block;
 }
 
+/* Laptop styles */
+
 .check-element {
     display: none;
 }
 
 .check-element.active {
-    display: block;
+    display: inline-block;
 }
 
-/* Laptop styles */
+.check-box {
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 10px 10px 17px lightgrey;
+    cursor: pointer;
+}
 
 @media only screen and (min-width: 701px) {
     .logo-container {
@@ -250,14 +258,6 @@ body {
         flex-basis: 40%;
         margin-inline: 0;
         margin-block: 2.5em;
-    }
-
-    .check-box {
-        background-color: var(--white);
-        padding: 1em;
-        border-radius: 12px;
-        box-shadow: 19px 19px 43px rgba(0, 0, 0, 0.09);
-        cursor: pointer;
     }
 
     .about {
