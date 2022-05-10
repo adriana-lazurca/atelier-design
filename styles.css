@@ -17,6 +17,7 @@ body {
     padding-inline: 0.5em;
     z-index: 1;
     position: relative;
+    min-height: 56px;
 }
 
 .header a {
@@ -123,7 +124,7 @@ body {
 
 /* Slider */
 
-.slider-container {
+.slider {
     position: relative;
     padding: 80px 36px;
     border: 1px solid var(--gray-main);
@@ -236,7 +237,6 @@ body {
         content: url(assets/images/worker2-laptop.png);
         position: relative;
         z-index: 2;
-        position: relative;
     }
 
     .worker2-shadow {
