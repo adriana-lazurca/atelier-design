@@ -8,7 +8,7 @@ function onLoad() {
    displayResponsiveFond();
 
    setSlider();
-   displayCheckElement()
+   displayCheckElement();
 }
 
 function onLeave() {
@@ -18,7 +18,7 @@ function onLeave() {
 function onResize() {
    displayResponsiveMenu();
    displayResponsiveFond();
-   displayCheckElement()
+   displayCheckElement();
 }
 
 function addEventHandlers() {
@@ -30,6 +30,17 @@ function removeEventHandlers() {
 }
 
 const screenWidth = window.innerWidth;
+
+function showElement(element) {
+   if (!element.classList.contains('active')) {
+      element.classList.add('active');
+   }
+}
+function hideElement(element) {
+   if (element.classList.contains('active')) {
+      element.classList.remove('active');
+   }
+}
 
 /************** Slider *****************/
 const sliderTexts = [
@@ -99,37 +110,12 @@ const menuLaptop = document.querySelector('.menu-laptop');
 
 function displayResponsiveMenu() {
    if (window.innerWidth <= 700) {
-      showMobileMenu();
-      hideLaptopMenu();
+      showElement(menuMobile);
+      hideElement(menuLaptop);
       return;
    }
-
-   showLaptopMenu();
-   hideMobileMenu();
-}
-
-function showMobileMenu() {
-   if (!menuMobile.classList.contains('active')) {
-      menuMobile.classList.add('active');
-   }
-}
-
-function showLaptopMenu() {
-   if (!menuLaptop.classList.contains('active')) {
-      menuLaptop.classList.add('active');
-   }
-}
-
-function hideLaptopMenu() {
-   if (menuLaptop.classList.contains('active')) {
-      menuLaptop.classList.remove('active');
-   }
-}
-
-function hideMobileMenu() {
-   if (menuMobile.classList.contains('active')) {
-      menuMobile.classList.remove('active');
-   }
+   showElement(menuLaptop);
+   hideElement(menuMobile);
 }
 
 /************** Fond display logic *****************/
@@ -138,37 +124,13 @@ const fondLaptop = document.querySelector('.fond-laptop');
 
 function displayResponsiveFond() {
    if (window.innerWidth <= 700) {
-      showMobileFond();
-      hideLaptopFond();
+      showElement(fondMobile);
+      hideElement(fondLaptop);
+
       return;
    }
-
-   showLaptopFond();
-   hideMobileFond();
-}
-
-function showMobileFond() {
-   if (!fondMobile.classList.contains('active')) {
-      fondMobile.classList.add('active');
-   }
-}
-
-function hideMobileFond() {
-   if (fondMobile.classList.contains('active')) {
-      fondMobile.classList.remove('active');
-   }
-}
-
-function showLaptopFond() {
-   if (!fondLaptop.classList.contains('active')) {
-      fondLaptop.classList.add('active');
-   }
-}
-
-function hideLaptopFond() {
-   if (fondLaptop.classList.contains('active')) {
-      fondLaptop.classList.remove('active');
-   }
+   showElement(fondLaptop);
+   hideElement(fondMobile);
 }
 
 /************** Check element display logic *****************/
@@ -176,22 +138,11 @@ const checkElement = document.querySelector('.check-element');
 
 function displayCheckElement() {
    if (window.innerWidth > 700) {
-      showCheckElement();
+      showElement(checkElement);
 
       return;
    }
 
-   hideCheckElement();
+   hideElement(checkElement);
 }
 
-function showCheckElement(){
-   if (!checkElement.classList.contains('active')) {
-      checkElement.classList.add('active');
-   }
-}
-
-function hideCheckElement(){
-   if (checkElement.classList.contains('active')) {
-      checkElement.classList.remove('active');
-   }
-}
